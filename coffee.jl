@@ -6,7 +6,6 @@ AgeCoffeeMax      = 40,         # maximum coffee stand age (start a new rotation
 SLA               = 10.97,      # Specific Leaf Area (m-2 kg-1 dry mass)
 wleaf             = 0.068,      # Leaf width (m)
 DELM              = 7.0,        # Max leaf carbon demand (gC plant-1 d-1)
-LAI_max           = 6.0,        # Max measured LAI to compute leaf demand. (measured= 5.56)
 Height_Coffee     = 2.0,        # Average coffee canopy height (m) used for aerodynamic conductance.
 D_pruning         = 74,         # day of year of pruning
 MeanAgePruning    = 5,          # Age of first pruning (year)
@@ -18,7 +17,6 @@ kres              = 0.08,       # Maximum carbon proportion extracted from reser
 DVG1              = 105,        # Day of year for the beginning of the Vegetative Growing Season
 DVG2              = 244,        # Day of year for the end of the Vegetative Growing Season
 MinTT             = 10.0,       # Minimum temperature threshold (deg C) for degree days computation
-MaxTT             = 40.0,       # Maximum temperature threshold (deg C) for degree days computation (if any)
 RNL_base          = 91.2,       # Nodes per LAI unit at the reference 20 Celsius degrees following Drinnan & Menzel (1995)
 VF_Flowering      = 5500.0,     # Very first flowering (dd) source: Rodriguez et al. (2001)
 F_buds1           = 840.0,      # Bud development stage 1 (2) source: PhD Louise Meylan p.58.
@@ -78,7 +76,7 @@ Q10_SCR           = 1.65,       # Stump and coarse root Q10 (-). Source: Van Oij
 Q10_FRoot         = 1.65,       # Fine root Q10 (-). Source: Van Oijen et al. (2010)
 TMR               = 15.0,       # Base temperature for maintenance respiration (deg C)
 MRN               =            # Base maintenance respiration (gC gN-1 d-1). Computed from Ryan (1991)
-  ((0.00055 * 12.0 * 12.0) + (0.00055 * 0.6 * 12.0 * 12.0)) / 2.0,
+((0.00055 * 12.0 * 12.0) + (0.00055 * 0.6 * 12.0 * 12.0)) / 2.0,
 # MRN: transformed in gDM gN-1 d-1 in the model using CC of each organ.
 # Accounting for 40% reduction during daytime (*1+ during night *0.6 during daylight)
 pa_Fruit          = 1.0,        # Fruit living tissue (fraction)
@@ -98,11 +96,10 @@ Fertilization     = 3,          # Number of fertilizations per year
 ShadeType         = 1,          # Shade type:
 # 1 Legume only; 2	bananas and legume only;3	bananas and other plants;
 # 4	fruit and forest tree only; 5	no shade
-CoffeePruning= "tree",           # Coffee pruning management type:
+CoffeePruning= "tree",          # Coffee pruning management type:
 # tree ; row ; 3 by block ; 4 NULL (no pruning)
-
+KTOT              = 80.0,       # soil to leaf hydraulic conductance (mol m-2 s-1 MPa-1)
 # Metamodels (or subroutines):
-LeafWaterPotential= LeafWaterPotential, # Leaf Water Potential (MPa)
 T_Coffee= T_Coffee,              # Transpiration
 H_Coffee= H_Coffee,              # Sensible heat flux
 lue= lue

@@ -60,7 +60,10 @@ pa_CR_Tree           = 0.21,                      # Coarse roots living tissue (
 pa_Leaf_Tree         = 1.0,                       # Leaf living tissue (fraction)
 pa_FRoot_Tree        = 1.0,                       # Fine root living tissue (fraction)
 WoodDensity          = 565.0,                     # Used for allometries, source http://www.wood-database.com/?s=cordia+alliodora.
+KTOT_Tree            = 80.0,                       # soil to leaf hydrolic conducance (mol m-2 s-1 MPa-1)
 k                    = light_extinction_K_Tree,   # Light extinction coefficient (modify if needed)
-metamodels_tree      = metamodels_tree,           # Idem for lue transpiration and sensible heat flux using MAESPA metamodels
+T_Tree               = T_Tree,                    # Metamodel for tree transpiration
+H_Tree               = H_Tree,                    # Metamodel for tree sensible heat
+lue_Tree             = lue_Tree,                  # Metamodel for tree lue
 Allometries          = tree_allometries           # Idem for lue transpiration and sensible heat flux using MAESPA metamodels
 )
